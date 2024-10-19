@@ -1,0 +1,33 @@
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B5563; /* Color of the thumb */
+    border-radius: 4px; /* Roundness of the scrollbar thumb */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #9CA3AF; /* Color of the scrollbar track */
+  }
+  
+
+
+.project-info {
+    display: none;
+}
+
+.projects:hover .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects:hover img {
+    opacity: 0.4;
+}

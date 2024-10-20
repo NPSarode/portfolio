@@ -35,22 +35,22 @@ const skills = [
     image: MySql,
   },
   {
-    id: 5,
+    id: 6,
     title: "Tailwind",
     image: Tailwind,
   },
   {
-    id: 5,
+    id: 7,
     title: "Postgres",
     image: Postgres,
   },
   {
-    id: 5,
+    id: 8,
     title: "React Native",
     image: ReactNative,
   },
   {
-    id: 5,
+    id: 9,
     title: "React Js",
     image: ReactLogo,
   },

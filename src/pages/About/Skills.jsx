@@ -8,6 +8,9 @@ import ReactNative from "../../assets/react-native.png";
 import ReactLogo from "../../assets/react.png";
 import Tailwind from "../../assets/tailwind.png";
 
+// React
+import { motion } from "framer-motion";
+
 const skills = [
   {
     id: 1,
@@ -64,7 +67,9 @@ const Skills = () => {
       </span>
       <div className="w-full flex justify-center sm:justify-evenly p-2 items-center flex-wrap gap-6 relative">
         {skills.map((skill) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
             key={skill.id}
             className="w-full sm:w-[45%] md:w-[30%] lg:w-1/5 mb-5 shadow-md mx-3 rounded-md bg-[#3b3e3e] p-5 flex flex-col justify-between gap-5 cursor-pointer transition-colors ease-in hover:bg-[#efc071]"
           >
@@ -74,7 +79,7 @@ const Skills = () => {
             <span className="h-1/3 text-slate-200 text-lg sm:text-xl flex items-end justify-center">
               {skill.title}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -1,5 +1,6 @@
 import AMS from "../../assets/AMS.jpeg";
 import GetReferral from "../../assets/get-referal.jpeg";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -30,7 +31,9 @@ const Portfolio = () => {
 
       <div className="w-full flex justify-center sm:justify-evenly p-2 items-center flex-wrap gap-6 relative">
         {projects.map((item) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
             key={item.id}
             className="relative transition-shadow ease-in-out duration-150 projects w-full sm:w-[45%] md:w-[30%] lg:w-1/5 mb-5 shadow-md mx-3 rounded-md bg-[#3b3e3e] flex flex-col justify-between gap-5 cursor-pointer"
           >
@@ -46,7 +49,7 @@ const Portfolio = () => {
               </span>
               <p className="text-sm sm:text-base">{item.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -1,22 +1,25 @@
+import './App.css';
+import React, { lazy, Suspense } from 'react';
 
-import './App.css'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Footer from './pages/Footer'
-import Home from './pages/Home'
-import Portfolio from './pages/Portfolio'
+// Lazy load components
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Footer = lazy(() => import('./pages/Footer'));
+const Home = lazy(() => import('./pages/Home'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 function App() {
-
   return (
-    <div className='bg-[#32353c] min-h-[100vh] scrollbar-thin   w-full'>
-     <Home/>
-     <About/>
-     <Portfolio/>
-     <Contact/>
-     <Footer/>
+    <div className='bg-[#32353c] min-h-[100vh] scrollbar-thin w-full'>
+      <Suspense fallback={<div className="text-white text-center">Loading...</div>}>
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

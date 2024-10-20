@@ -59,12 +59,26 @@ const skills = [
   },
 ];
 
+const headerAnimation = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Skills = () => {
   return (
     <div className="pt-10 flex flex-col gap-10 sm:gap-16 lg:gap-20">
-      <span className="font-semibold text-4xl sm:text-5xl md:text-6xl text-center">
+      <motion.span initial="hidden"
+        animate="visible"
+        variants={headerAnimation} className="font-semibold text-4xl sm:text-5xl md:text-6xl text-center">
         My Skills
-      </span>
+      </motion.span>
       <div className="w-full flex justify-center sm:justify-evenly p-2 items-center flex-wrap gap-6 relative">
         {skills.map((skill) => (
           <motion.div

@@ -19,15 +19,29 @@ const projects = [
   },
 ];
 
+const headerAnimation = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Portfolio = () => {
   return (
     <div
       id="portfolio"
       className="pt-10 min-h-[100vh] flex flex-col gap-10 sm:gap-16 lg:gap-20 text-slate-200"
     >
-      <span className="font-semibold text-4xl sm:text-5xl md:text-6xl text-center">
+      <motion.span initial="hidden"
+        animate="visible"
+        variants={headerAnimation} className="font-semibold text-4xl sm:text-5xl md:text-6xl text-center">
         Portfolio
-      </span>
+      </motion.span>
 
       <div className="w-full flex justify-center sm:justify-evenly p-2 items-center flex-wrap gap-6 relative">
         {projects.map((item) => (

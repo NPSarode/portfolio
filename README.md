@@ -14,8 +14,8 @@ Welcome to my **Portfolio Website** repository! This is a personal project to sh
 
 - **React.js** – For building dynamic user interfaces
 - **Tailwind CSS** – For fast, utility-first styling
-- **Framer Motion** – For smooth animations (if used)
-- **React Router** – For navigation (if used)
+- **Framer Motion** – For smooth animations 
+- **React Router** – For navigation 
 
 ---
 

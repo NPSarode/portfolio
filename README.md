@@ -6,7 +6,7 @@ Welcome to my **Portfolio Website** repository! This is a personal project to sh
 
 ## 🌐 Live Demo
 
-> 🔗 [View Portfolio][(https://your-portfolio-link.com)](https://modern-portfolio-cqav.onrender.com/)]
+> 🔗 [View Portfolio][(https://your-portfolio-link.com)](https://modern-portfolio-cqav.onrender.com/)
 
 ---
 
